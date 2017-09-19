@@ -1,0 +1,31 @@
+if &compatible
+  set nocompatible
+endif
+
+set runtimepath+=~/.local/share/dein/repos/github.com/Shougo/dein.vim/
+
+if dein#load_state('/home/tomokane/.cache/dein')
+  call dein#begin('/home/tomokane/.cache/dein')
+
+  call dein#add('/home/tomokane/.local/share/dein/repos/github.com/Shougo/dein.vim/')
+  call dein#add('Shougo/neocomplete.vim')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('fatih/vim-go')
+  call dein#add('fatih/molokai')
+  call dein#add('tpope/vim-dispatch')
+  call dein#add('vim-script/quickfix')
+  call dein#add('AndrewRadev/splitjoin.vim')
+  call dein#add('SirVer/ultisnips')
+  call dein#add('ctrlpvim/ctrlp.vim')
+  call dein#add('jiangmiao/auto-pairs')
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('scrooloose/nerdcommenter')
+
+  call dein#end()
+  call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax enable

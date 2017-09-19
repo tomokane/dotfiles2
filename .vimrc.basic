@@ -1,0 +1,22 @@
+set updatetime=100
+set visualbell
+set noerrorbells
+set number
+set laststatus=2
+set t_Co=256
+" set list
+
+set listchars=tab:>-,trail:_,extends:>,precedes:<
+
+set showcmd
+
+set autowrite
+
+set showmode
+
+augroup myvimrchooks
+    au!
+    autocmd bufwritepost ~/dotfiles/.vimrc source ~/.vimrc
+    autocmd bufwritepost ~/dotfiles/.vimrc.* source ~/.vimrc
+augroup END
+
