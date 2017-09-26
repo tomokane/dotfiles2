@@ -20,6 +20,7 @@ let g:go_auto_type_info = 1
 let g:go_auto_sameids = 1
 let g:go_guru_scope = ["..."]
 let g:go_play_browser_command = "chrome"
+let g:go_snippet_engine = "neosnippet"
 
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>

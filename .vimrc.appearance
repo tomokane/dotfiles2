@@ -3,7 +3,7 @@ let g:airline_extensions = ['tabline']
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
 let g:airline_detect_iminsert=1
-let g:airline_theme='luna'
+let g:airline_theme='dark'
 
 let g:rehash256 = 1
 let g:molokai_original = 1

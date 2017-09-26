@@ -1,3 +1,7 @@
+set encoding=utf-8
+
+set directory^=$HOME/.vim/tmp//
+
 set updatetime=100
 set visualbell
 set noerrorbells
@@ -14,9 +18,23 @@ set autowrite
 
 set showmode
 
+set splitbelow
+set splitright
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+let g:SimpylFold_docstring_preview=1
+
+set clipboard=unnamed
+
+" Enable folding with the spacebar
+nnoremap <space> za
+
 augroup myvimrchooks
     au!
-    autocmd bufwritepost ~/dotfiles/.vimrc source ~/.vimrc
-    autocmd bufwritepost ~/dotfiles/.vimrc.* source ~/.vimrc
+    autocmd bufwritepost ~/dotfiles/.vimrc source ~/.vimrc | AirlineRefresh
+    autocmd bufwritepost ~/dotfiles/.vimrc.* source ~/.vimrc | AirlineRefresh
 augroup END
 

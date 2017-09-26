@@ -1,4 +1,5 @@
 let mapleader = ","
+set backspace=indent,eol,start
 
 inoremap jj <Esc>
 
@@ -12,6 +13,14 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 
-nmap <Space><Space> ;bnext<CR>
-nmap <BS><BS> ;bprevious<CR>
+inoremap , ,<space>
+
+" spaceで次のbufferへ。back-spaceで前のbufferへ
+nnoremap <Space><Space> :bn<CR>
+nnoremap <BS><BS> :bp<CR>
+
+nnoremap <silent> <M-F12> :BufExplorer<CR>
+nnoremap <silent> <F2> :bn<CR>
+nnoremap <silent> <F3> :bp<CR>
+nnoremap <silent> <F4> :bd<CR>
 

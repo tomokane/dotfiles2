@@ -1,0 +1,57 @@
+let g:pymode_python = 'python3'
+
+let python_highlight_all=1
+syntax on
+
+let pymode = 1
+let pymode_breakpoint = 1
+let pymode_breakpoint_bind = '<leader>b'
+let pymode_doc = 1
+let pymode_doc_bind = 'K'
+let pymode_folding = 1
+let pymode_indent = 1
+let pymode_lint = 1
+let pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
+let pymode_lint_cwindow = 1
+let pymode_lint_ignore = ''
+let pymode_lint_message = 1
+let pymode_lint_on_fly = 0
+let pymode_lint_on_write = 1
+let pymode_lint_select = ''
+let pymode_lint_signs = 1
+let pymode_motion = 1
+let pymode_options = 1
+let pymode_paths = []
+let pymode_quickfix_maxheight = 6
+let pymode_quickfix_minheight = 3
+let pymode_rope = 1
+let pymode_run = 1
+let pymode_run_bind = '<leader>r'
+let pymode_trim_whitespaces = 1
+let pymode_virtualenv = 1
+let pymode_virtualenv_enabled = ''
+let pymode_virtualenv_path = ''
+
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+
+"python with virtualenv support
+"py << EOF
+"import os
+"import sys
+"if 'VIRTUAL_ENV' in os.environ:
+"  project_base_dir = os.environ['VIRTUAL_ENV']
+"  activate_this = os.path.join(project_base_dir, 'bin/activate')
+"  execfile(activate_this, dict(__file__=activate_this))
+"EOF
