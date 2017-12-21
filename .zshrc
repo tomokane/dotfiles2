@@ -45,11 +45,11 @@ npm_dir=${NVM_PATH}_modules
 export NODE_PATH=$npm_dir
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
+#export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # openmpi
 export PATH=/usr/local/mpi/bin:$PATH
@@ -59,12 +59,13 @@ export LD_LIBRARY_PATH=/usr/local/mpi/lib:$LD_LIBRARY_PATH
 export PATH="$HOME/ml/cntk/build/release/bin:$PATH"
 export LD_LIBRARY_PATH="$HOME/ml/cntk/build/release/lib:$LD_LIBRARY_PATH"
 export KERAS_BACKEND=cntk
-export PYTHONPATH=$HOME/ml/cntk/bindings/python:$PYTHONPATH
+#export PYTHONPATH=$HOME/ml/cntk/bindings/python:$PYTHONPATH
 export LD_LIBRARY_PATH=$HOME/ml/cntk/bindings/python/cntk/libs:$LD_LIBRARY_PATH
+export PATH=/home/tomokane/anaconda3/bin:$PATH
 
 # caffe2
-export PYTHONPATH=/usr/local:$PYTHONPATH
-export PYTHONPATH=$PYTHONPATH:/home/tomokane/ml/caffe2/build
+#export PYTHONPATH=/usr/local:$PYTHONPATH
+#export PYTHONPATH=$PYTHONPATH:/home/tomokane/ml/caffe2/build
 
 # openlava
 export PATH="/opt/openlava-4.0/bin:$PATH"
@@ -79,8 +80,8 @@ eval "$(anyenv init -)"
 # kubernete
 source <(kubectl completion zsh)
 
-plugins=(git bundler rake ruby aws colorize ubuntu golang python rails rbenv pyenv tmux docker docker-compose)
+plugins=(git bundler rake ruby aws colorize ubuntu golang python rails rbenv tmux docker docker-compose)
 source $ZSH/oh-my-zsh.sh
 
 # powerline-status
-. .local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+. /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
